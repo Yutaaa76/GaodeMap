@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:src="@mipmap/icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:background="@color/white">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="手机:　　"
+                android:textColor="@color/trans_icon_blue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+            </TextView>
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="请输入手机号码"
+                android:maxLength="11"
+                android:layout_marginLeft="10dp"
+                android:selectAllOnFocus="true"
+                android:background="@color/white">
+            </EditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/trans_icon_blue"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="密码:　　"
+                android:textColor="@color/trans_icon_blue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+            </TextView>
+
+            <com.hhu.map.ui.ClearEditText
+                android:id="@+id/et_password"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:hint="请输入密码"
+                android:minLines="1"
+                android:layout_marginLeft="10dp"
+                android:selectAllOnFocus="true"
+                android:background="@color/white">
+            </com.hhu.map.ui.ClearEditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/trans_icon_blue"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="确认密码:"
+                android:textColor="@color/trans_icon_blue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+            </TextView>
+
+            <com.hhu.map.ui.ClearEditText
+                android:id="@+id/et_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:hint="请再次输入密码"
+                android:textColor="@color/trans_icon_blue"
+                android:layout_marginLeft="10dp"
+                android:selectAllOnFocus="true"
+                android:background="@color/white">
+            </com.hhu.map.ui.ClearEditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/trans_icon_blue"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="性别:　　"
+                android:textColor="@color/trans_icon_blue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/bt_female"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:button="@null"
+                    android:background="@drawable/bg_checked"
+                    android:text="女"
+                    android:textColor="@color/icon_blue"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp">
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/bt_male"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_normal"
+                    android:text="男"
+                    android:textColor="@color/icon_blue"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="10dp">
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/icon_blue"
+            android:text="注册"
+            android:background="@drawable/bg_normal"
+            android:textColor="@color/white"
+            android:textSize="26sp">
+        </Button>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
